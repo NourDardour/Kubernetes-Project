@@ -6,7 +6,5 @@ unzip
 ADD carvilla.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip carvilla.zip
-RUN sh -c 'unzip -q "*.zip"'
-RUN rm -rf carvilla carvilla.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80 20
